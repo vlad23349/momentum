@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/owfont-regular.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>momentum</title>
+  </head>
+  <body>
+    <header class="header">
+      <div id="player" class="player">
+        <audio></audio>
+        <div class="player-controls">
+          <button class="play-prev player-icon"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon"></button>
+          <div class="player-time">
+            <div class="current">0:00</div>
+            <div class="divider">/</div>
+            <div class="length"></div>
+          </div>
+          <div class="volume-container">
+            <div class="volume-button">
+              <div class="volume icono-volumeMedium"></div>
+            </div>
+
+            <div class="volume-slider">
+              <div class="volume-percentage"></div>
+            </div>
+          </div>
+        </div>
+        <div class="player-timeline">
+          <div class="progress"></div>
+        </div>
+        <ul class="play-list"></ul>
+      </div>
+      <div id="weather" class="weather">
+        <input type="text" class="city" />
+        <i class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+          <span class="temperature"></span>
+          <span class="weather-description"></span>
+        </div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="slider-icons">
+        <button class="slide-prev slider-icon"></button>
+        <button class="slide-next slider-icon"></button>
+      </div>
+      <time id="time" class="time"></time>
+      <date id="date" class="date"></date>
+      <div id="greeting-container" class="greeting-container">
+        <span class="greeting"></span>
+        <input type="text" class="name" />
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="settings-container fadeOut">
+        <div class="settings-box">
+          <p class="description">Language:</p>
+          <label class="toggler-wrapper">
+            <input type="checkbox" class="checkbox language-checkbox" />
+            <div class="toggler-slider language-slider">
+              <span class="language-mod">English</span>
+              <div class="toggler-knob language-knob"></div>
+            </div>
+          </label>
+        </div>
+        <div class="settings-box">
+          <p class="description">Chose API:</p>
+          <div class="select-API">
+            <div class="form-radio">
+              <input id="github" type="radio" name="radio" value="1" checked />
+              <label for="github">Github</label>
+            </div>
+
+            <div class="form-radio">
+              <input id="unsplash" type="radio" name="radio" value="2" />
+              <label for="unsplash">Unsplash API</label>
+            </div>
+
+            <div class="form-radio">
+              <input id="flickr" type="radio" name="radio" value="3" />
+              <label for="flickr">Flickr API</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-box">
+          <p class="description">Player:</p>
+          <label class="toggler-wrapper">
+            <input checked type="checkbox" class="def-checkbox" />
+            <div class="toggler-slider">
+              <div id="player-knob" class="toggler-knob"></div>
+            </div>
+          </label>
+        </div>
+        <div class="settings-box">
+          <p class="description">Weather:</p>
+          <label class="toggler-wrapper">
+            <input checked type="checkbox" class="def-checkbox" />
+            <div class="toggler-slider">
+              <div id="weather-knob" class="toggler-knob"></div>
+            </div>
+          </label>
+        </div>
+
+        <div class="settings-box">
+          <p class="description">Time:</p>
+          <label class="toggler-wrapper">
+            <input checked type="checkbox" class="def-checkbox" />
+            <div class="toggler-slider">
+              <div id="time-knob" class="toggler-knob"></div>
+            </div>
+          </label>
+        </div>
+        <div class="settings-box">
+          <p class="description">Date:</p>
+          <label class="toggler-wrapper">
+            <input checked type="checkbox" class="def-checkbox" />
+            <div class="toggler-slider">
+              <div id="date-knob" class="toggler-knob"></div>
+            </div>
+          </label>
+        </div>
+        <div class="settings-box">
+          <p class="description">Greeting:</p>
+          <label class="toggler-wrapper">
+            <input checked type="checkbox" class="def-checkbox" />
+            <div class="toggler-slider">
+              <div id="greeting-container-knob" class="toggler-knob"></div>
+            </div>
+          </label>
+        </div>
+        <div class="settings-box">
+          <p class="description">Quotes:</p>
+          <label class="toggler-wrapper">
+            <input checked type="checkbox" class="def-checkbox" />
+            <div class="toggler-slider">
+              <div id="quote-container-knob" class="toggler-knob"></div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <span class="settings-ico"></span>
+      <div id="quote-container" class="quote-container">
+        <button class="change-quote"></button>
+        <div>
+          <div class="quote"></div>
+          <div class="author"></div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="js/date.js"></script>
+    <script type="module" src="js/slider.js"></script>
+    <script type="module" src="js/weather.js"></script>
+    <script type="module" src="js/quotes.js"></script>
+    <script type="module" src="js/audioPlayer.js"></script>
+    <script type="module" src="js/pageTranslater.js"></script>
+    <script type="module" src="js/settings.js"></script>
+  </body>
+</html>
